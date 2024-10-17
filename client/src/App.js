@@ -1,12 +1,17 @@
 
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TestApi from './components/TestApi';
+import Marketfeed from './Pages/marketfeed/Marketfeed';
 
 function App() {
   return (
-    <div className="App">
-      <TestApi/>
-    </div>
+    <BrowserRouter>
+       <Routes>
+          <Route path="/" element={<TestApi />} />
+          <Route path='/marketfeed' element={<Marketfeed/>}/>
+       </Routes>
+    </BrowserRouter>
   );
 }
 
